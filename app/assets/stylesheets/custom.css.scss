@@ -87,6 +87,15 @@ footer ul li {
       
 // }
 
+.return_link {
+  color: #bd9090;
+}
+
+.return_link:hover {
+  color: #c56f6f;
+  text-decoration: none;
+} 
+
 hr {
     height: 9px;
 }
@@ -94,5 +103,3 @@ hr {
 h1 {
     margin-top: 8px;
 }
-
-
