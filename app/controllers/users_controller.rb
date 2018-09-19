@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:success] = "Thank you for signing up!"
       redirect_to root_url
     else
-      render :new
+      render 'new'
     end
   end
 
