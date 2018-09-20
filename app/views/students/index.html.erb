@@ -4,7 +4,7 @@
 
   
 
-  <% if @students.present? %>
+ 
    <table class="table table-bordered center table-width">
    <thead>
     <tr>
@@ -35,23 +35,8 @@
      <tbody> 
     <%= render partial: 'student', collection: @students %>
      </tbody>
-    <% else %>
-    
-    <p><center style="
-    color:  red;
-    font-size: 17px;
-    padding: 182px;
-">There are no results for your search.
- <div>
- <input type="button" class="btn btn-info inv-clear-search" value="Back" onclick="location.href = 'https://rails-tutorial-yaseenkola.c9users.io/students';" style="
-    margin-top: 7px;
-">
- </div>
-  </center></p>
-    <% end %>
-
-
- 
+   
+  
   
 </table>
 
