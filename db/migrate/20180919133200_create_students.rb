@@ -1,9 +1,9 @@
 class CreateStudents < ActiveRecord::Migration[5.2]
   def change
     create_table :students do |t|
-      t.integer :admission_no
+      t.text :admission_no
       t.date :admission_date
-      t.string :student_name
+      t.text :student_name
       t.string :surname
       t.string :class_applied
       t.integer :age

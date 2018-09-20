@@ -2,6 +2,7 @@
 
   <%= link_to 'New Admission', new_student_path, class: "btn btn-xs btn-info new_action" %>
 
+  <tbody id = "yakola"> 
 
     <% if @students.present? %>
     <!--<div class="scrollbar">-->
@@ -46,55 +47,17 @@
       <%= form_tag students_path,  method: :get do %>
       <p>
         <center><%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search" , class: "btn btn-outline-secondary search-button" %></center>
+          <%= submit_tag "Search" , :class=> "btn btn-outline-secondary search-button" %></center>
         </p>
         <% end %>
 
-       <tbody>
+     
 <!--<div >-->
 
 <!--<input type="button" class="btn btn-info inv-clear-search" value="Clear Search" onclick="location.href = 'https://rails-tutorial-yaseenkola.c9users.io/students';">-->
 
 <!--</div>-->
-<% @students.each do |student| %>
-    <tr>
-        <td><%= student.admission_no %></td>
-        <td><%= student.admission_date %></td>
-        <td><%= student.student_name %></td>
-        <td><%= student.surname %></td>
-        <td><%= student.class_applied %></td>
-        <td><%= student.age %></td>
-        <!--<td><%= student.dob.try(:strftime,'%d/%m/%Y') %></td>-->
-        <td><%= student.dob %></td>
-        <td><%= student.pob %></td>
-        <td><%= student.card_no %></td>
-        <td><%= student.gender %></td>
-        <!-- <td><%= student.father_name %></td>
-        <td><%= student.occupation %></td>
-        <td><%= student.qualification %></td>
-        <td><%= student.mob_no %></td>
-        <td><%= student.email %></td>
-        <td><%= student.address %></td>
-        <td><%= student.mother_name %></td>
-        <td><%= student.m_occupation %></td>
-        <td><%= student.m_qualification %></td>
-        <td><%= student.specialist %></td>
-        <td><%= student.m_address %></td>
-        <td><%= student.m_mob %></td>
-        <td><%= student.m_email %></td>
-        <td><%= student.whats_app %></td>
-        <td><%= student.req_trans %></td>
-        <td><%= student.trans_addr %></td>
-        <td><%= student.remarks %></td> -->
-
- 
-        <td><%= link_to 'Show', student, class: "btn btn-xs btn-success" %></td>      
-        <td><%= link_to "Edit", edit_student_path(student), class: "btn btn-xs btn-primary" %></td>
-        <td><%= link_to "Delete", student_path(student), method: :delete,
-        data: { confirm: "Are you sure you want to delete the student?"},
-        class: "btn btn-xs btn-danger" %></td>
-      </tr>
-<% end %>
+    <%= render partial: 'student', collection: @students %>
     <% else %>
     <p><center style="
     color:  red;
