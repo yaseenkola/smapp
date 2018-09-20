@@ -12,7 +12,15 @@ Rails.application.routes.draw do
   post 'login', to: "sessions#create"
   delete 'logout', to: "sessions#destroy"
   
-
+  # get 'admission', to: 'students#index'
+  
+   resources :students do
+    collection { post :import }
+  end
+  
+  get 'students/import', to: 'students_imports#index'
+  
+  get "remove_all_students" => "students#remove_all"
   
   
 end

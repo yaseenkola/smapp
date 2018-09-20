@@ -10,7 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_18_101916) do
+ActiveRecord::Schema.define(version: 2018_09_19_133200) do
+
+  create_table "students", force: :cascade do |t|
+    t.integer "admission_no"
+    t.date "admission_date"
+    t.string "student_name"
+    t.string "surname"
+    t.string "class_applied"
+    t.integer "age"
+    t.date "dob"
+    t.string "pob"
+    t.integer "card_no"
+    t.string "gender"
+    t.string "father_name"
+    t.string "occupation"
+    t.string "qualification"
+    t.string "mob_no"
+    t.string "email"
+    t.string "address"
+    t.string "mother_name"
+    t.string "m_occupation"
+    t.string "m_qualification"
+    t.string "specialist"
+    t.string "m_address"
+    t.string "m_mob"
+    t.string "m_email"
+    t.string "whats_app"
+    t.string "req_trans"
+    t.string "trans_addr"
+    t.string "remarks"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"

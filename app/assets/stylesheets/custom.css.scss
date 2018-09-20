@@ -1,5 +1,7 @@
 
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 #logo {
   float: left;
@@ -24,7 +26,7 @@
 // }
 
 .jumbotron {
-    margin-top: 63px;
+    margin-top: 81px;
 }
 
 .jumbotron h1 {
@@ -102,4 +104,85 @@ hr {
 
 h1 {
     margin-top: 8px;
+}
+
+#my_img {
+  float: right;
+  // margin-right: -245px;
+  margin-right: -419px;
+}
+
+.student_actions {
+    margin-top: 275px;
+    padding-bottom: 15px;
+}
+
+.container-fluid {
+    width: 903px !important;
+}
+
+.container_margin {
+    margin-top: 13px;
+}
+
+.row_margin {
+    margin-top: 9px;
+}
+
+#search {
+    display: block;
+    width: 40%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.search-button {
+    margin-left: 531px;
+    margin-top: -65px;
+}
+
+.table-width {
+    width: 1149px;
+}
+
+#admission_form {
+    padding-left: 50px;
+    margin-top: 33px;
+}
+
+#student_gender_male {
+	margin-right: 10px;
+}
+
+#student_gender_female {
+	margin-right: 10px;
+    margin-top: 11px;
+}
+
+label {
+	margin-right: 15px;
+}
+
+#student_req_trans_yes {
+    margin-right: 10px;
+}
+
+#student_req_trans_no {
+    margin-right: 10px;
+    margin-top: 11px;
+}
+
+.new_action {
+    margin-right: -40px;
+    float: right;
+    margin-left: -99px;
 }

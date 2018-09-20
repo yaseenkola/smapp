@@ -1,0 +1,96 @@
+
+
+  <%= link_to 'New Admission', new_student_path, class: "btn btn-xs btn-info new_action" %>
+
+  <tbody id = "yakola"> 
+
+    <% if @students.present? %>
+    <!--<div class="scrollbar">-->
+<table class="table table-bordered center table-width">
+  <thead>
+    <tr>
+      <th>Admission no</th>
+      <th>Admission Date</th>
+      <th>Student name</th>
+      <th>Surname</th>
+      <th>Class</th>
+      <th>Age</th>
+      <th>Date Of Birth</th>
+      <th>Place Of Birth</th>
+      <th>Adhar Card No</th>
+      <th>Gender</th>
+      <!-- <th>Father Name</th>
+      <th>Occupation</th>
+      <th>Qualification</th>
+      <th>Mobile No</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Mother Name</th>
+      <th>Occupation</th>
+      <th>Qualification</th>
+      <th>Specialist in</th>
+      <th>Address</th>
+      <th>Mobile No</th>
+      <th>Email</th>
+      <th>WhatsApp No</th>
+      <th>Transportation Required</th>
+      <th>Transport Address</th>
+      <th>Remarks</th> -->
+
+
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <!-- <a href="#" class="toggle-formed" style="float: right;" ><strong>Search</strong></a> -->
+
+      <%= form_tag students_path,  method: :get do %>
+      <p>
+        <center><%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search" , class: "btn btn-outline-secondary search-button" %></center>
+        </p>
+        <% end %>
+
+     
+<!--<div >-->
+
+<!--<input type="button" class="btn btn-info inv-clear-search" value="Clear Search" onclick="location.href = 'https://rails-tutorial-yaseenkola.c9users.io/students';">-->
+
+<!--</div>-->
+    <%= render partial: 'student', collection: @students %>
+    <% else %>
+    <p><center style="
+    color:  red;
+    font-size: 17px;
+    padding: 182px;
+">There are no results for your search.
+<div>
+<input type="button" class="btn btn-info inv-clear-search" value="Back" onclick="location.href = 'https://rails-tutorial-yaseenkola.c9users.io/students';" style="
+    margin-top: 7px;
+">
+</div>
+</center></p>
+    <% end %>
+
+
+  </tbody>
+  
+</table>
+<!--</div>-->
+
+
+<!--<center> <%= link_to "Remove All", remove_all_students_path, :method => :get, data: {confirm: 'Are you sure?'} %></center>-->
+
+    <!-- <script type="text/javascript">
+      $( document ).ready(function() {
+  // $(document).on('page:change', function () {
+    $("div#sample").hide();
+
+    //    | === HERE
+    $("a.toggle-formed").click(function(event) {
+      event.preventDefault();
+      $("div#sample").fadeToggle();
+      $("#search").focus();
+    });
+});
+    </script> -->

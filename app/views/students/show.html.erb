@@ -1,0 +1,183 @@
+
+<div class="card card-block bg-faded container_margin">
+  <div class="container-fluid">
+
+  <div class="row row_margin">
+    <div class="col-sm">
+     <p>
+  <strong>Admission no:</strong>
+<%= @student.admission_no %></p>
+
+
+<p>
+  <strong>Admission Date:</strong>
+<%= @student.admission_date %></p>
+
+<p>
+  <strong>Student name:</strong>
+  <%= @student.student_name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @student.surname %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @student.class_applied %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @student.age %>
+</p>
+
+<p>
+  <strong>Date Of Birth:</strong>
+  <%= @student.dob %>
+</p>
+
+<p>
+  <strong>Place Of Birth:</strong>
+  <%= @student.pob %>
+</p>
+
+<p>
+  <strong>Adhar Card No:</strong>
+  <%= @student.card_no %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @student.gender %>
+</p>
+
+    </div>
+    <div class="col-sm">
+  <!--<%= simple_format(@student.student_name) %>-->
+
+<div>
+<%= image_tag @student.image.url(:thumb), id:"my_img" %>
+</div>
+
+
+
+<p>
+  <strong>Father Name:</strong>
+  <%= @student.father_name %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @student.occupation %>
+</p>
+
+<p>
+  <strong>Qualification:</strong>
+  <%= @student.qualification %>
+</p>
+
+<p>
+  <strong>Mobile No:</strong>
+  <%= @student.mob_no %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @student.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @student.address %>
+</p>
+
+
+
+<div class="student_actions">
+
+<%= link_to "Edit", edit_student_path(@student), class: "btn btn-xs btn-primary" %>
+
+<%= link_to "Delete", student_path(@student), method: :delete,
+
+data: { confirm: "Are you sure you want to delete the student?"},
+
+class: "btn btn-xs btn-danger" %>
+
+<%= link_to "View all", students_path, class: "btn btn-xs btn-success" %>
+
+</div>
+    </div>
+    <div class="col-sm">
+      <p>
+  <strong>Mother Name:</strong>
+  <%= @student.mother_name %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @student.m_occupation %>
+</p>
+
+<p>
+  <strong>Qualification:</strong>
+  <%= @student.m_qualification %>
+</p>
+
+<p>
+  <strong>Specialist in:</strong>
+  <%= @student.specialist %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @student.m_address %>
+</p>
+
+<p>
+  <strong>Mobile No:</strong>
+  <%= @student.m_mob %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @student.m_email %>
+</p>
+
+<p>
+  <strong>WhatsApp No:</strong>
+  <%= @student.whats_app %>
+</p>
+
+<p>
+  <strong>Transportation Required:</strong>
+  <%= @student.req_trans %>
+</p>
+
+<p>
+  <strong>Transport Address:</strong>
+  <%= @student.trans_addr %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @student.remarks %>
+</p>
+
+    </div>
+  </div>
+</div>
+<!-- <h4 class="center description"><strong>Student name:</strong></h4>
+
+<hr>
+-->
+</div>
+
+
+
+
+
+
+
+

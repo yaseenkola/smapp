@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to "Al-Suffah", root_path, class: "navbar-brand", id: "logo" %>
+  <%= link_to "Al-Suffah", "#", class: "navbar-brand", id: "logo" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,7 +12,7 @@
   <% if logged_in? %>
      <ul class="navbar-nav mr-auto">
          <li class="nav-item">
-          <a class="nav-link" href="#">Admission</a>
+          <li><%= link_to "Admission", students_path, class: "nav-link" %>
          </li>
      </ul>
      

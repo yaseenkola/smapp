@@ -1,0 +1,326 @@
+<%= render 'shared/errors', obj: @student %>
+
+
+
+<%= form_for(@student, html: { multipart: true }, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+<div id="admission_form">
+
+<!--<div id="necessary-field-notification"> Fields marked with <span class="necessary-field">*</span> must be filled.</div>-->
+
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :admission_no %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :admission_no, class: "form-control", 
+                            placeholder: "Please Enter...", autofocus: true %>
+    </div>
+  </div>
+
+
+   <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :admission_date %>
+    </div>
+    <div class="col-md-8">
+      <%= f.date_field :admission_date, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+    </div>
+  </div>
+  
+
+<br>
+
+<span class="span-sub-heading"><%= "Pupil Detail" %></span>
+
+  <hr class="sub-heading"></hr>
+  
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :student_name %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :student_name, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :surname %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :surname, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+
+   <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :class_applied %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :class_applied, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :age %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :age, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :dob, "Date Of Birth" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.date_field :dob, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :pob, "Place Of Birth" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :pob, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :card_no, "Adhar Card No" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :card_no, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :gender %>
+    </div>
+    <div class="col-md-8">
+      <%= f.collection_radio_buttons :gender, {Male: 'Male', Female: 'Female'}.map{|k,v| OpenStruct.new(value: v, label: k) }, :value, :label, include_hidden: false %>
+
+    </div>
+  </div>
+
+
+
+<span class="span-sub-heading"><%= "Father's Detail" %></span>
+
+  <hr class="sub-heading"></hr>
+
+
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :father_name, "Full Name" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :father_name, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :occupation %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :occupation, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :qualification %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :qualification, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :mob_no, "Mobile No" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :mob_no, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :email %>
+    </div>
+    <div class="col-md-8">
+      <%= f.email_field :email, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :address %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :address, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+<span class="span-sub-heading"><%= "Mother's Detail" %></span>
+
+  <hr class="sub-heading"></hr>
+  
+  
+   <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :mother_name, "Full Name" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :mother_name, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :m_occupation, "Occupation" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :m_occupation, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :m_qualification, "Qualification" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :m_qualification, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :specialist, "Specialist in" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :specialist, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :m_address, "Address" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :m_address, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :m_mob, "Mobile No" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :m_mob, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :m_email, "Email" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.email_field :m_email, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :whats_app, "WhatsApp No" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :whats_app, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+       <%= f.label :req_trans, "Transportation Required" %>
+    </div>
+    <div class="col-md-8">
+       <%= f.collection_radio_buttons :req_trans, {Yes: 'Yes', No: 'No'}.map{|k,v| OpenStruct.new(value: v, label: k) }, :value, :label, include_hidden: false %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :trans_addr, "Transport Address" %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :trans_addr, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :remarks %>
+    </div>
+    <div class="col-md-8">
+      <%= f.text_field :remarks, class: "form-control", 
+                            placeholder: "Please Enter..." %>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="control-label col-md-2">
+      <%= f.label :image %>
+    </div>
+    <div class="col-md-8">
+      <%= f.file_field :image, class: "form-control", placeholder: "Please Enter...", autofocus: true %>
+    </div>
+  </div>
+  
+  
+  
+  <div class="form-group row">
+    <div class="col-sm-10">
+     <%= f.submit "Create", class: 'btn btn-primary' %>
+    </div>
+  </div>
+  
+
+<% end %>
+
+<div class="col-xs-4 col-xs-offset-4">
+
+[ <%= link_to "Cancel request and return", students_path %> ]
+
+</div>
+
+</div>
+

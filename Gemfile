@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'font-awesome-sass'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -69,3 +71,16 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'wicked_pdf', '~> 1.1'
+gem 'wkhtmltopdf-binary', '~> 0.12.4'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+
+gem "paperclip", "~> 6.0.0"
+
+gem 'roo'
+# gem 'roo-xls', '~> 1.0'
+gem 'roo-xls', '~> 1.1'
+
+gem "font-awesome-rails"

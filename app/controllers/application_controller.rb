@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   
+  add_flash_types :danger,:success
+  
   private
 
   def logged_in?
