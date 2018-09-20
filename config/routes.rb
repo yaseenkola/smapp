@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   post 'login', to: "sessions#create"
   delete 'logout', to: "sessions#destroy"
   
-  # get 'admission', to: 'students#index'
+  get 'admission', to: 'students#index'
   
-   resources :students do
+  resources :students do
     collection { post :import }
   end
   
