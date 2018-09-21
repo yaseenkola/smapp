@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 2018_09_19_133200) do
 
   create_table "students", force: :cascade do |t|
-    t.text "admission_no"
+    t.string "admission_no"
     t.date "admission_date"
-    t.text "student_name"
+    t.string "student_name"
     t.string "surname"
     t.string "class_applied"
     t.integer "age"
