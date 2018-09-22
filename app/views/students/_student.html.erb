@@ -1,4 +1,5 @@
 <tr>
+       <td><%= link_to (image_tag student.image.url(:thumb)), {controller: "students", action: "show", id: student} %></td>
         <td><%= student.admission_no %></td>
         <td><%= student.admission_date %></td>
         <td><%= student.student_name %></td>
@@ -10,30 +11,30 @@
         <td><%= student.pob %></td>
         <td><%= student.card_no %></td>
         <td><%= student.gender %></td>
-        <!-- <td><%= student.father_name %></td>
-        <td><%= student.occupation %></td>
-        <td><%= student.qualification %></td>
-        <td><%= student.mob_no %></td>
-        <td><%= student.email %></td>
-        <td><%= student.address %></td>
-        <td><%= student.mother_name %></td>
-        <td><%= student.m_occupation %></td>
-        <td><%= student.m_qualification %></td>
-        <td><%= student.specialist %></td>
-        <td><%= student.m_address %></td>
-        <td><%= student.m_mob %></td>
-        <td><%= student.m_email %></td>
-        <td><%= student.whats_app %></td>
+        <!-- <td><%= student.father_name %></td>-->
+        <!--<td><%= student.occupation %></td>-->
+        <!--<td><%= student.qualification %></td>-->
+        <!--<td><%= student.mob_no %></td>-->
+        <!--<td><%= student.email %></td>-->
+        <!--<td><%= student.address %></td>-->
+        <!--<td><%= student.mother_name %></td>-->
+        <!--<td><%= student.m_occupation %></td>-->
+        <!--<td><%= student.m_qualification %></td>-->
+        <!--<td><%= student.specialist %></td>-->
+        <!--<td><%= student.m_address %></td>-->
+        <!--<td><%= student.m_mob %></td>-->
+        <!--<td><%= student.m_email %></td>-->
+        <!--<td><%= student.whats_app %></td>-->
         <td><%= student.req_trans %></td>
-        <td><%= student.trans_addr %></td>
-        <td><%= student.remarks %></td> -->
+        <!--<td><%= student.trans_addr %></td>-->
+        <td><%= student.remarks %></td>
 
  
-        <td><%= link_to 'Show', student, class: "btn btn-xs btn-success" %></td>      
-        <td><%= link_to "Edit", edit_student_path(student), class: "btn btn-xs btn-primary" %></td>
+        <!--<td><%= link_to 'Show', student, class: "btn btn-xs btn-success" %></td>      -->
+        <!--<td><%= link_to "Edit", edit_student_path(student), class: "btn btn-xs btn-primary" %></td>
         <td><%= link_to "Delete", student_path(student), method: :delete,
         data: { confirm: "Are you sure you want to delete the student?"},
-        class: "btn btn-xs btn-danger" %></td>
+        class: "btn btn-xs btn-danger" %></td>-->
       </tr>
 
 
