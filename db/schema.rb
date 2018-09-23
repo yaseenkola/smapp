@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_133200) do
     t.integer "age"
     t.date "dob"
     t.string "pob"
-    t.integer "card_no"
+    t.string "card_no"
     t.string "gender"
     t.string "father_name"
     t.string "occupation"
