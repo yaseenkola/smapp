@@ -9,7 +9,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.integer :age
       t.date :dob
       t.string :pob
-      t.integer :card_no, limit: 8
+      t.string :card_no
       t.string :gender
       t.string :father_name
       t.string :occupation
