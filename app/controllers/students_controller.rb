@@ -39,7 +39,7 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
-        format.html { redirect_to admissions_url, success: 'Student was successfully created.' }
+        format.html { redirect_to admissions_url, success: 'Student record was successfully created.' }
         format.json { render :show, status: :created, location: @student }
       else
         format.html { render :new }
@@ -53,7 +53,7 @@ class StudentsController < ApplicationController
   def update
     respond_to do |format|
       if @student.update(student_params)
-        format.html { redirect_to admissions_url, success: 'Student was successfully updated.' }
+        format.html { redirect_to admissions_url, success: 'Student record was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
       else
         format.html { render :edit }
