@@ -3,7 +3,7 @@ class Student < ApplicationRecord
 
   def self.search(search)
 
-    where (["student_name LIKE ? OR admission_no LIKE ?", "%#{search}%","%#{search}%"]) 
+    where (["student_name::text LIKE ? OR admission_no::text LIKE ?", "%#{search}%","%#{search}%"]) 
 
   end
 
