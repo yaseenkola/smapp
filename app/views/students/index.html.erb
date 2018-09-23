@@ -1,6 +1,9 @@
 
+<div class = "new_button">
+  <%= link_to 'New Admission', admission_new_path, class: "btn btn-xs btn-info" %> 
+  <%= link_to "Import", admissions_import_path, class: "btn btn-xs btn-info" %>
+</div>  
 
-  <%= link_to 'New Admission', new_student_path, class: "btn btn-xs btn-info new_action" %>
 
   <tbody id = "yakola"> 
 
@@ -45,7 +48,7 @@
 
   <!-- <a href="#" class="toggle-formed" style="float: right;" ><strong>Search</strong></a> -->
 
-      <%= form_tag students_path,  method: :get do %>
+      <%= form_tag admissions_path,  method: :get do %>
       <p>
         <center><%= text_field_tag :search, params[:search] %>
           <%= submit_tag "Search" , :class=> "btn btn-outline-secondary search-button" %></center>
@@ -66,7 +69,7 @@
     padding: 182px;
 ">There are no results for your search.
 <div>
-<input type="button" class="btn btn-info inv-clear-search" value="Back" onclick="location.href = 'https://school-mgmt-app.herokuapp.com/students';" style="
+<input type="button" class="btn btn-info inv-clear-search" value="Back" onclick="location.href = '/admissions';" style="
     margin-top: 7px;
 ">
 </div>

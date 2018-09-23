@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+ 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "pages#home"
   
@@ -13,12 +14,15 @@ Rails.application.routes.draw do
   delete 'logout', to: "sessions#destroy"
   
   # get 'admission', to: 'students#index'
-  
-  resources :students do
+  # get 'admissions/new', to: 'students#new', as: 'new'
+  get 'admission/new', to: 'students#new'
+  get 'admissions', to: 'students#index'
+
+  resources :students, except: [:new, :index] do
     collection { post :import }
   end
   
-  get 'students/import', to: 'students_imports#index'
+  get 'admissions/import', to: 'student_imports#index'
   
   get "remove_all_students" => "students#remove_all"
   

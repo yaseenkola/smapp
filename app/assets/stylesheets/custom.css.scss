@@ -146,7 +146,7 @@ h1 {
 
 
 .search-button {
-    margin-left: 531px;
+    margin-left: 399px;
     margin-top: -65px;
 }
 
@@ -185,4 +185,47 @@ label {
     // margin-right: -40px;
     float: right;
     // margin-left: -99px;
+}
+
+#s_import {
+    margin-top: 154px;
+    margin-left: 407px;
+    margin-bottom: 146px;
+    height: 200px;
+    width: 400px;
+    background-color: rgb(239, 244, 249);
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+.import {
+border-radius: 8px;
+cursor: pointer;
+color: white;
+background-color: #009578;
+padding: 10px;
+border: 1px solid #a99191;
+  
+}
+
+#file {
+border-radius: 8px;
+cursor: pointer;
+color: white;
+background-color: #009578;
+padding: 10px;
+border: 1px solid #a99191;
+margin-left: 10px;
+margin-bottom: 20px;
+}
+
+.import_heading {
+  font-weight: bold;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.new_button {
+    float: right;
 }

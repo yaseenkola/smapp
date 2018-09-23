@@ -1,0 +1,12 @@
+<div id="s_import">
+	
+
+<h2 class="import_heading">Import Admission File</h2>
+    <%= form_tag import_students_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import", class: "import" %>
+    <% end %>
+
+</div>
+
+
