@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'admission/new', to: 'students#new'
   get 'admissions', to: 'students#index'
 
-  resources :students, except: [:new, :index] do
+  resources :students, except: [:new, :index], path: 'admissions' do
     collection { post :import }
   end
   

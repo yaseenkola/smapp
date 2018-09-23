@@ -6,7 +6,7 @@
 
 <a href="#" class="close" data-dismiss="alert">×</a>
 
-<%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+<%= content_tag :div, msg, :id => "flash_#{name}", :class => "center flash_color" if msg.is_a?(String) %>
 
 </div>
 
