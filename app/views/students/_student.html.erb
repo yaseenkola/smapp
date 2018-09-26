@@ -1,5 +1,5 @@
-<tr>
-       <td><%= link_to (image_tag student.image.url(:thumb)), {controller: "students", action: "show", id: student} %></td>
+<tr>  
+       <td><%= link_to (image_tag student.image.url(:thumb), style: 'width:100%'), {controller: "students", action: "show", id: student} %></td>
         <td><%= student.admission_no %></td>
         <td><%= student.admission_date %></td>
         <td><%= student.student_name %></td>

@@ -82,9 +82,9 @@
 </table>
 <!--</div>-->
 
-
-<!--<center> <%= link_to "Remove All", remove_all_students_path, :method => :get, data: {confirm: 'Are you sure?'} %></center>-->
-
+  <% if logged_in? && current_user.admin? %>
+     <center> <%= link_to "Remove All", remove_all_students_path, class: "btn btn-sm btn-danger", :method => :get, data: {confirm: 'Are you sure?'} %></center>
+  <% end %>
     <!-- <script type="text/javascript">
       $( document ).ready(function() {
   // $(document).on('page:change', function () {

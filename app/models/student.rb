@@ -1,9 +1,11 @@
 class Student < ApplicationRecord
+  
+  belongs_to :user
 
 
   def self.search(search)
 
-    where (["student_name::text LIKE ? OR admission_no::text LIKE ?", "%#{search}%","%#{search}%"]) 
+    where (["student_name LIKE ? OR admission_no LIKE ?", "%#{search}%","%#{search}%"]) 
 
   end
 
