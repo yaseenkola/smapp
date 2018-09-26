@@ -27,8 +27,8 @@ class StudentsController < ApplicationController
 
   # GET /fees/new
   def new
-    # @student = Student.new
-    @student = current_user.students.build
+    @student = Student.new
+    # @student = current_user.students.build
   end
 
   # GET /fees/1/edit
