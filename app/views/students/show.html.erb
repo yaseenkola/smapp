@@ -97,7 +97,7 @@
 
 <div class="student_actions">
   
-  <% if logged_in? && current_user == @student.user %>
+ <% if logged_in? && (current_user == @student.user || current_user.admin?) %>
 
  <%= link_to "Edit", edit_student_path(@student), class: "btn btn-xs btn-primary" %>
 
