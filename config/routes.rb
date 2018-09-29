@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   post 'login', to: "sessions#create"
   delete 'logout', to: "sessions#destroy"
   
+  # for seacrh in navbar
+  post '/admissions' => 'students#index'
+  
   # get 'admission', to: 'students#index'
   # get 'admissions/new', to: 'students#new', as: 'new'
   get 'admission/new', to: 'students#new'
