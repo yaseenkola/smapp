@@ -6,12 +6,19 @@ class StudentsController < ApplicationController
   # GET /fees
   # GET /fees.json
   def index
-    @students = Student.search(params[:search])
-
+    
+    if current_user.admin?
+      @students = Student.all.search(params[:search])
+    else
+     @students = current_user.students.search(params[:search]) 
+    end
+    
     respond_to do |format|
       format.html
       format.js
     end
+    
+    # flash[:danger] = "No record found" if @students.nil? || @students.blank?
 
   end
 

@@ -84,3 +84,7 @@ gem 'roo'
 gem 'roo-xls', '~> 1.1'
 
 gem "font-awesome-rails"
+
+gem 'active_link_to'
+
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
