@@ -79,7 +79,7 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 
 gem "paperclip"
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk-s3'
 
 gem 'roo'
 # gem 'roo-xls', '~> 1.0'
