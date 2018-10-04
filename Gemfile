@@ -33,7 +33,7 @@ gem 'font-awesome-sass'
 
 # Use ActiveStorage variant
 gem 'mini_magick'
-gem 'fog'
+# gem 'fog'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
