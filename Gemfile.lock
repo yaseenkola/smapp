@@ -62,13 +62,20 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (9.1.4)
       execjs
-    aws-sdk (2.11.142)
-      aws-sdk-resources (= 2.11.142)
-    aws-sdk-core (2.11.142)
+    aws-eventstream (1.0.1)
+    aws-partitions (1.105.0)
+    aws-sdk-core (3.29.0)
+      aws-eventstream (~> 1.0)
+      aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.11.142)
-      aws-sdk-core (= 2.11.142)
+    aws-sdk-kms (1.9.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-s3 (1.20.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.3)
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -262,7 +269,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_link_to
-  aws-sdk (~> 2.3)
+  aws-sdk-s3
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.1.3)
