@@ -58,7 +58,7 @@
   <!--<%= simple_format(@student.student_name) %>-->
 
 <div>
-<%= image_tag @student.image.url(:thumb), id:"my_img" %>
+<%= image_tag @student.image.url, id:"my_img" if @student.image? %>
 </div>
 
 

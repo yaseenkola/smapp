@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2018_09_25_135910) do
     t.integer "age"
     t.date "dob"
     t.string "pob"
-    t.integer "card_no", limit: 8
+    t.integer "card_no"
     t.string "gender"
     t.string "father_name"
     t.string "occupation"
@@ -61,10 +61,7 @@ ActiveRecord::Schema.define(version: 2018_09_25_135910) do
     t.string "req_trans"
     t.string "trans_addr"
     t.string "remarks"
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.integer "image_file_size"
-    t.datetime "image_updated_at"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"

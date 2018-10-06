@@ -28,7 +28,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.string :req_trans
       t.string :trans_addr
       t.string :remarks
-      t.attachment :image
+      t.string :image
       
       t.timestamps
     end

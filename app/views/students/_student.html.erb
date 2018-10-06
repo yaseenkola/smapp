@@ -1,6 +1,6 @@
-<tr>  
-       <td><%= link_to (image_tag student.image.url(:thumb), style: 'width:100%'), {controller: "students", action: "show", id: student} %></td>
-        <td><%= student.admission_no %></td>
+<tr> 
+        <td><%= link_to (image_tag student.image.url, size: '70x70' if student.image?),student %></td>
+        <td><%= link_to student.admission_no , student %></td>
         <td><%= student.admission_date %></td>
         <td><%= student.student_name %></td>
         <td><%= student.surname %></td>

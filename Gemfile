@@ -32,9 +32,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-sass'
 
 # Use ActiveStorage variant
+gem 'carrierwave'
 gem 'mini_magick'
-# gem 'fog'
-
+gem 'fog'
+# gem 'fog-aws'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -78,8 +79,8 @@ gem 'wkhtmltopdf-binary', '~> 0.12.4'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 
-gem "paperclip"
-gem 'aws-sdk-s3'
+# gem "paperclip"
+# gem 'aws-sdk-s3'
 
 gem 'roo'
 # gem 'roo-xls', '~> 1.0'
