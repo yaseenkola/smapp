@@ -30,4 +30,13 @@ Rails.application.routes.draw do
   get "remove_all_students" => "students#remove_all"
   
   
+  resources :search, only: [:index] do
+    collection do
+      post 'results'
+    end
+  end
+  
+  post '/results' => 'students#index'
+  
+  
 end

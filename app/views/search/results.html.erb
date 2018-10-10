@@ -1,0 +1,58 @@
+<h4 class="center">Students Found:
+  <span class="badge badge-pill badge-primary"><%= @students.size %></span>
+</h4>
+
+<!--<% if @students.empty? %>-->
+<!--  <p>Sorry, no students found.</p>-->
+<!--<% else %>-->
+<!--  <ul>-->
+<!--    <% @students.each do |student| %>-->
+<!--      <ol><%= link_to student.student_name, student %></ol>-->
+<!--    <% end %>-->
+<!--  </ul>-->
+<!--<% end %>-->
+
+
+    
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm"></div>
+          <div class="col-sm">
+            <% if @students.empty? %>
+    
+              <div class="alert alert-danger center">
+               <strong>No record found</strong>
+              </div>
+       
+            <% else %>
+    
+      <table class="table table-bordered table-striped table-hover center">
+          <thead class="thead-light">
+            <tr>
+              <!--<th>Students image</th>-->
+              <!--<th>Admission no</th>-->
+              <!--<th>Admission Date</th>-->
+              <th>Student Name</th>
+              <!--<th>Surname</th>-->
+              <!--<th>Class</th>-->
+              <!--<th>Age</th>-->
+              <!--<th>Date Of Birth</th>-->
+              <!--<th>Place Of Birth</th>-->
+              <!--<th>Adhar Card No</th>-->
+              <!--<th>Gender</th>-->
+              <!--<th>Transportation Required</th>-->
+              <!--<th>Remarks</th>-->
+            </tr>
+        </thead>
+      <tbody>  
+       <% @students.each do |student| %>
+         <td><%= link_to student.student_name, student, style: "color: #bbc3cc;font-weight: bold;text-decoration: none;" %></td>
+      </tbody>
+       <% end %>
+    <% end %>
+    
+    </table>
+  </div>
+  <div class="col-sm"></div>
+</div>

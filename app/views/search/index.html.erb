@@ -1,0 +1,19 @@
+<div class="center">
+
+<h2>Search for Students</h2>
+</div>
+<!--<%= form_tag(results_search_index_path, method: "post") do %>-->
+<!--  <%= label_tag(:q, "Search for:") %>-->
+<!--  <%= text_field_tag(:q) %>-->
+<!--  <%= submit_tag("Search") %>-->
+<!--<% end %>-->
+
+<div class="input-group">
+  <%= form_tag(results_search_index_path, method: "post") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Students", class: 'form-control' %>
+    <span class="input-group-btn">
+      <%= submit_tag "Search", class: 'btn btn-default' %>
+    </span>
+  <% end %>
+</div>
+
