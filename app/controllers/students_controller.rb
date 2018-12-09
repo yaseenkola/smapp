@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
   end
 
   def import
-    Student.import(params[:file])
+    Student.import(params[:file], current_user)
     redirect_to admissions_path, success: "File was successfully imported."
   end
 
