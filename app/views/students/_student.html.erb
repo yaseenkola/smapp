@@ -1,5 +1,13 @@
 <tr> 
-        <td><%= link_to (image_tag student.image.url, size: '70x70' if student.image?),student %></td>
+        <!--<td><%= link_to (image_tag student.image.url, size: '70x70', class: 'rounded mx-auto d-block rounded-circle' if student.image?),student %></td>-->
+        <td>
+         <% if student.image? %>
+         <!--<%= image_tag student.image.url, size: '70x70', class: 'rounded mx-auto d-block rounded-circle' %>-->
+         <%= link_to (image_tag student.image.url, size: '70x70', class: 'rounded mx-auto d-block rounded-circle'),student %>
+         <% else %>
+         <%= link_to (image_tag 'default.jpg', size: '70x70', class: 'rounded mx-auto d-block rounded-circle'),student %>
+         <% end %>
+        </td>
         <td><%= student.admission_no %></td>
         <td><%= student.admission_date %></td>
         <td><%= student.student_name %></td>
