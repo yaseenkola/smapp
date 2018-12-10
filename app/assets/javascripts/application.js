@@ -18,3 +18,8 @@
 //= require turbolinks
 //= require dataTables/jquery.dataTables
 //= require_tree .
+
+/* global $ */
+ $(document).on('turbolinks:load', function() {
+   $('#fade-out-target').fadeOut(4000);
+ })
