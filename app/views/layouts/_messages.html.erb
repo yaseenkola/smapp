@@ -1,5 +1,7 @@
 <!--</br>-->
-<div style="margin-top: 23px;" id="fade-out-target">
+<div style="margin-top: 23px;" >
+  
+<div id="fade-out-target">
   
 <% flash.each do |name, msg| %>
 
@@ -8,6 +10,8 @@
 <a href="#" class="close" data-dismiss="alert">×</a>
 
 <%= content_tag :div, msg, :id => "flash_#{name}", :class => "center flash_color" if msg.is_a?(String) %>
+
+</div>
 
 </div>
 
