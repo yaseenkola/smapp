@@ -47,37 +47,6 @@
 }
 
 
-footer {
-  margin-top: 111px;
-  padding-top: 15px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
 
 // label {
 //   margin-left: 89px;
@@ -266,10 +235,49 @@ table, tbody, thead, tr, th, td {
   justify-content: center;
 }
 
-.blog-footer {
-    padding: 40px 0;
-    color: #999;
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
     text-align: center;
-    background-color: #f9f9f9;
-    border-top: 1px solid #e5e5e5;
+    color: #777;
+    padding: 0px;
+}
+
+
+// footer {
+//   margin-top: 111px;
+//   padding-top: 15px;
+//   border-top: 1px solid #eaeaea;
+//   color: #777;
+//   padding-left: 10px;
+//   padding-right: 10px;
+// }
+
+
+footer a {
+  // color: #555;
+  color: #7f7b7b;
+
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
