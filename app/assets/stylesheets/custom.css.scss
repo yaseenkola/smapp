@@ -87,11 +87,16 @@ h1 {
   border-radius: 50% !important;
 }
 
-.student_actions {
-    margin-top: 275px;
-    padding-bottom: 15px;
-}
+// .student_actions {
+//     margin-top: 275px;
+//     padding-bottom: 15px;
+// }
 
+.student_actions {
+    /* margin-top: 275px; */
+    padding-bottom: 15px;
+    text-align: center;
+}
 // .container-fluid {
 //     width: 903px !important;
 // }
@@ -280,4 +285,207 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+#student_main_info {
+    float:left;
+    margin-left:50px;
+    width:500px;
+}
+#student_main_info h3 {
+    margin:0;
+    padding:0;
+    margin-top:0px;
+}
+#student_main_info h4 {
+    margin:0;
+    padding:0;
+    color:#b00;
+    margin-top:10px;
+}
+#student_main_info h6 {
+    margin:0;
+    padding:0;
+    color:#b00;
+    margin-top:5px;
+}
+#student_main_info h5 {
+    background-color:#eee;
+}
+
+// #new_profile_info_top {
+//     margin:30px auto;
+//     width:697px;
+   
+// }
+
+#new_profile_info_top {
+    margin: 30px auto;
+    width: 585px;
+}
+
+.profile_top_banner{
+    position:absolute;
+    float:right;
+    padding-left:525px;
+    margin-top:-12px;
+    
+}
+
+.profile_info_label_top {
+    padding-top:7px;
+    padding-bottom:5px;
+    height:41px;
+    width:150px;
+    text-align:right;
+    padding-right:20px;
+    float:left;
+    font-weight:bold;
+    color:#548ab2;
+    background: #eff3fe;
+    border-top:1px solid #bdcfff;
+    margin-right:5px;
+}
+
+.profile_info_text_top {
+    padding-top:7px;
+    padding-bottom:5px;
+    padding-left:20px;
+    height:41px;
+    width:500px;
+    float:left;
+    font-weight:bold;
+    color:#000;
+    background: #eff3fe;
+    border-top:1px solid #bdcfff;
+}
+
+.profile_info_text_top a{
+    color:#000;
+}
+.profile_info_text_top a:hover{
+    color:#BB0000;
+}
+
+.profile_info_label_top2 {
+    padding-top:7px;
+    padding-bottom:5px;
+    height:41px;
+    width:150px;
+    text-align:right;
+    padding-right:20px;
+    float:left;
+    font-weight:bold;
+    color:#548ab2;
+    background: #dae6ff;
+    border-top:1px solid #bdcfff;
+    margin-right:5px;
+}
+
+.profile_info_text_top2 {
+    padding-top:7px;
+    padding-bottom:5px;
+    padding-left:20px;
+    height:41px;
+    width:500px;
+    float:left;
+    font-weight:bold;
+    color:#000;
+    background: #dae6ff;
+    border-top:1px solid #bdcfff;
+}
+
+.new_profile_info_area1 {
+    height:87px;
+    width:682px;
+   
+}
+
+.extender {
+    height: 1px;
+    clear: both;
+}
+    
+// #student_profile_heading {
+//     width: 800px;
+//     margin: 0px auto;
+// }
+
+#student_profile_heading {
+    width: 725px;
+    margin: 0px 148px;
+}
+
+#profile_picture_display {
+    float: left;
+    width: 125px;
+    height: 125px;
+    margin-left: 50px;
+    border: 8px solid #EFEFD1;
+}
+
+#my_height_width {
+  height: 109px;
+    width: 109px;
+}
+    
+  
+// #page-yield {
+//     margin: 30px 0;
+//     /* margin-left: 10px; */
+// }
+
+
+#page-yield {
+       margin: -21px 0;
+    /* margin-left: 10px; */
+}
+
+
+#content {
+    padding-bottom: 33px;
+    margin-top: 40px;
+}
+
+#content {
+    float: left;
+    width: 980px;
+}
+
+.odd{
+    height:auto;
+    background: #eff3fe;
+    margin-right: 45px;
+}
+.odd td{
+    font-weight:bold;
+    padding:10px 10px 10px 10px;
+    border-top:1px solid #bdcfff;
+    border-bottom:1px solid #bdcfff;
+}
+.right{
+    width: 450px;
+    color:#000000;
+    text-align: left;
+}
+.left{
+    width: 250px;
+    color:#548ab2;
+    text-align: right;
+}
+.even{
+    height:auto;
+    background: #dae6ff;
+    margin-right:5px;
+}
+.even td{
+    
+    font-weight:bold;
+    border-top:1px solid #bdcfff;
+    border-bottom:1px solid #bdcfff;
+    padding:10px 10px 10px 10px;
+}
+
+table {
+    border-collapse: separate;
 }
