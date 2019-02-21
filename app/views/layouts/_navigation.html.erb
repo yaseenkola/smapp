@@ -11,15 +11,23 @@
       <!--</li>-->
   <% if logged_in? %>
      <ul class="navbar-nav mr-auto">
-         <li class="nav-item">
-          <li><%= active_link_to "Admission", admissions_path, class: "nav-link" %>
-         </li>
+         <!--<li class="nav-item">-->
+         <!-- <li><%= active_link_to "Student Admission", admission_new_path, class: "nav-link" %>-->
+         <!--</li>-->
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Students
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= active_link_to "Student Admission", admission_new_path, class: "dropdown-item" %>
+          <%= active_link_to "Student details", search_index_path, class: "dropdown-item" %>
+        </li>
          <!--<li class="nav-item">-->
          <!-- <li><%= active_link_to "SignUp", signup_path, class: "nav-link" %>-->
          <!--</li>-->
-         <li class="nav-item">
-           <%= active_link_to "Search Students", search_index_path, class: "nav-link" %>
-         </li>
+         <!--<li class="nav-item">-->
+         <!--  <%= active_link_to "Student details", search_index_path, class: "nav-link" %>-->
+         <!--</li>-->
      </ul>
      
      <ul class="navbar-nav ml-auto">
@@ -58,20 +66,20 @@
       
       
       
-      <!--<li class="nav-item dropdown">-->
-      <!--  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-      <!--    Dropdown-->
-      <!--  </a>-->
-      <!--  <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-      <!--    <a class="dropdown-item" href="#">Action</a>-->
-      <!--    <a class="dropdown-item" href="#">Another action</a>-->
-      <!--    <div class="dropdown-divider"></div>-->
-      <!--    <a class="dropdown-item" href="#">Something else here</a>-->
-      <!--  </div>-->
-      <!--</li>-->
-      <!--<li class="nav-item">-->
-      <!--  <a class="nav-link disabled" href="#">Disabled</a>-->
-      <!--</li>-->
+    <!--  <li class="nav-item dropdown">-->
+    <!--    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+    <!--      Dropdown-->
+    <!--    </a>-->
+    <!--    <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+    <!--      <a class="dropdown-item" href="#">Action</a>-->
+    <!--      <a class="dropdown-item" href="#">Another action</a>-->
+    <!--      <div class="dropdown-divider"></div>-->
+    <!--      <a class="dropdown-item" href="#">Something else here</a>-->
+    <!--    </div>-->
+    <!--  </li>-->
+    <!--  <li class="nav-item">-->
+    <!--    <a class="nav-link disabled" href="#">Disabled</a>-->
+    <!--  </li>-->
     <!--</ul>-->
     
     
